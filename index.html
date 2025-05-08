@@ -1,257 +1,330 @@
-<div style="width: 1440px; height: 4188px; background: white; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
-  <div style="align-self: stretch; padding-left: 80px; padding-right: 80px; padding-top: 96px; padding-bottom: 96px; background: #030712; justify-content: space-between; align-items: flex-start; display: inline-flex">
-    <div style="flex: 1 1 0; height: 388px; padding-left: 32px; padding-right: 32px; justify-content: flex-start; align-items: flex-start; gap: 48px; display: flex">
-      <div style="align-self: stretch; flex-direction: column; justify-content: center; align-items: flex-start; gap: 48px; display: inline-flex">
-        <div style="align-self: stretch; height: 200px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 8px; display: flex">
-          <div style="color: #F9FAFB; font-size: 60px; font-family: Inter; font-weight: 700; line-height: 72px; word-wrap: break-word">Hi, I am Parth......</div>
-          <div style="width: 768px; color: #D1D5DB; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 24px; word-wrap: break-word">I am currently a second-year student at SRM University, pursuing a degree in Computer Science and Engineering with a specialization in Software Engineering. My technical expertise extends to Data Structures and Algorithms, and I am proficient in languages like C++, Python, C, and Java. This combination of experience and formal education allows me to continuously improve and bring a unique blend of skills to every project.</div>
-        </div>
-        <div style="align-self: stretch; height: 56px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 8px; display: flex">
-          <div style="align-self: stretch; justify-content: flex-start; align-items: center; gap: 8px; display: inline-flex">
-            <div style="width: 24px; height: 24px; position: relative">
-              <div style="width: 16px; height: 20px; left: 4px; top: 2px; position: absolute; border: 2px #D1D5DB solid"></div>
-              <div style="width: 6px; height: 6px; left: 9px; top: 7px; position: absolute; border: 2px #D1D5DB solid"></div>
-            </div>
-            <div style="color: #D1D5DB; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 24px; word-wrap: break-word">Chennai, India</div>
-          </div>
-          <div style="justify-content: flex-start; align-items: center; gap: 8px; display: inline-flex"></div>
-        </div>
-        <div style="align-self: stretch; height: 36px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 16px; display: flex">
-          <div style="justify-content: flex-start; align-items: center; gap: 4px; display: inline-flex">
-            <div style="padding: 6px; border-radius: 8px; justify-content: center; align-items: center; display: flex">
-              <div style="width: 24px; height: 24px; position: relative">
-                <div style="width: 16.02px; height: 20px; left: 3.99px; top: 2px; position: absolute; border: 2px #D1D5DB solid"></div>
-                <div style="width: 7px; height: 2.56px; left: 2px; top: 16px; position: absolute; border: 2px #D1D5DB solid"></div>
-              </div>
-            </div>
-            <div style="padding: 6px; border-radius: 8px; justify-content: center; align-items: center; display: flex">
-              <div style="width: 24px; height: 24px; padding-top: 3.99px; padding-bottom: 3px; padding-left: 2px; padding-right: 2px; justify-content: center; align-items: center; display: flex">
-                <div style="width: 20px; height: 17.01px; border: 2px #D1D5DB solid"></div>
-              </div>
-            </div>
-            <div style="padding: 6px; border-radius: 8px; justify-content: center; align-items: center; display: flex">
-              <div style="width: 24px; height: 24px; position: relative">
-                <div style="width: 7px; height: 7px; left: 5px; top: 2px; position: absolute; border: 2px #D1D5DB solid"></div>
-                <div style="width: 7px; height: 7px; left: 12px; top: 2px; position: absolute; border: 2px #D1D5DB solid"></div>
-                <div style="width: 7px; height: 7px; left: 12px; top: 9px; position: absolute; border: 2px #D1D5DB solid"></div>
-                <div style="width: 7px; height: 7px; left: 5px; top: 16px; position: absolute; border: 2px #D1D5DB solid"></div>
-                <div style="width: 7px; height: 7px; left: 5px; top: 9px; position: absolute; border: 2px #D1D5DB solid"></div>
-              </div>
-            </div>
-          </div>
-        </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interactive Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+
+  <!-- AOS Scroll Animation Library -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+
+  <style>
+    :root {
+      --bg: #f7f9fc;
+      --text: #1e1e2f;
+      --card: #ffffff;
+      --accent: #ffbf00;
+    }
+
+    body.dark {
+      --bg: #1e1e2f;
+      --text: #ffffff;
+      --card: #2d2d44;
+      --accent: #ffd700;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      transition: background 0.4s, color 0.4s;
+    }
+
+    header {
+      background: var(--text);
+      color: var(--bg);
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+    }
+
+    nav a {
+      color: var(--bg);
+      margin-left: 2rem;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .toggle {
+      cursor: pointer;
+      background: var(--accent);
+      border: none;
+      padding: 0.5rem 1rem;
+      color: black;
+      font-weight: bold;
+      border-radius: 8px;
+      margin-left: 1rem;
+    }
+
+    section {
+      padding: 4rem 2rem;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+    }
+
+    /* Hero */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .hero-text {
+      max-width: 600px;
+    }
+
+    .hero-text h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-text p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    .hero-text a {
+      padding: 0.75rem 1.5rem;
+      background: var(--accent);
+      color: #000;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .hero-img img {
+      width: 300px;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    /* Skills */
+    .skills {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .skill {
+      margin-bottom: 1.5rem;
+    }
+
+    .skill-label {
+      font-weight: 500;
+      margin-bottom: 0.3rem;
+    }
+
+    .skill-bar {
+      background: #ddd;
+      height: 15px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .skill-bar-fill {
+      height: 100%;
+      background: var(--accent);
+      width: 0;
+      transition: width 1.2s ease;
+    }
+
+    /* Work section */
+    .work {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      margin-top: 2rem;
+    }
+
+    .work-card {
+      background: var(--card);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .work-card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .work-card h3 {
+      text-align: center;
+      padding: 1rem;
+      background: var(--accent);
+      color: #000;
+      font-size: 1.25rem;
+      margin: 0;
+    }
+
+    .work-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Contact */
+    footer {
+      background: var(--text);
+      color: var(--bg);
+      text-align: center;
+      padding: 2rem;
+    }
+
+    footer a {
+      color: var(--accent);
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-img img {
+        margin-top: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My Portfolio</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+      <button class="toggle" onclick="toggleTheme()">🌙</button>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero-text" data-aos="fade-right">
+      <h2>Hi, I'm [Your Name]</h2>
+      <p>I build responsive websites and creative digital experiences. Let's work together to build something great!</p>
+      <a href="#contact">Contact Me</a>
+    </div>
+    <div class="hero-img" data-aos="fade-left">
+      <img src="images/yourphoto.jpg" alt="Your Photo" />
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" data-aos="fade-up">
+    <h2 class="section-title">About Me</h2>
+    <p style="max-width: 800px; margin: auto; text-align: center;">
+      I’m a front-end developer with a passion for clean design and efficient code. I work with HTML, CSS, JavaScript, and frameworks like React to create dynamic web apps.
+    </p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" data-aos="fade-up">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills">
+      <div class="skill">
+        <div class="skill-label">HTML</div>
+        <div class="skill-bar"><div class="skill-bar-fill" data-fill="95%"></div></div>
       </div>
-      <div style="flex: 1 1 0; align-self: stretch; flex-direction: column; justify-content: center; align-items: flex-end; display: inline-flex">
-        <div style="width: 320px; height: 360px; position: relative">
-          <div style="width: 280px; height: 320px; left: 40px; top: 40px; position: absolute; background: #374151; border: 8px #030712 solid"></div>
-          <img style="width: 280px; height: 320px; left: 0px; top: 0px; position: absolute; border: 8px #030712 solid" src="images/v1_393.png" />
-        </div>
+      <div class="skill">
+        <div class="skill-label">CSS</div>
+        <div class="skill-bar"><div class="skill-bar-fill" data-fill="90%"></div></div>
+      </div>
+      <div class="skill">
+        <div class="skill-label">JavaScript</div>
+        <div class="skill-bar"><div class="skill-bar-fill" data-fill="85%"></div></div>
+      </div>
+      <div class="skill">
+        <div class="skill-label">Java</div>
+        <div class="skill-bar"><div class="skill-bar-fill" data-fill="80%"></div></div>
       </div>
     </div>
-  </div>
-  <div style="align-self: stretch; padding-left: 80px; padding-right: 80px; padding-top: 96px; padding-bottom: 96px; background: #111827; justify-content: space-between; align-items: flex-start; display: inline-flex">
-    <div style="flex: 1 1 0; padding-left: 32px; padding-right: 32px; flex-direction: column; justify-content: flex-start; align-items: center; gap: 48px; display: inline-flex">
-      <div style="align-self: stretch; height: 28px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 16px; display: flex">
-        <div style="align-self: stretch; height: 28px; flex-direction: column; justify-content: center; align-items: center; display: flex">
-          <div style="padding-left: 20px; padding-right: 20px; padding-top: 4px; padding-bottom: 4px; background: #374151; border-radius: 12px; justify-content: center; align-items: center; display: inline-flex">
-            <div style="color: #D1D5DB; font-size: 14px; font-family: Inter; font-weight: 500; line-height: 20px; word-wrap: break-word">About me</div>
-          </div>
-        </div>
+  </section>
+
+  <!-- Work -->
+  <section id="work" data-aos="fade-up">
+    <h2 class="section-title">Work</h2>
+    <div class="work">
+      <div class="work-card" data-aos="fade-right">
+        <h3>eLab Completion</h3>
+        <img src="images/elab.jpg" alt="eLab Completion Certificate">
       </div>
-      <div style="align-self: stretch; justify-content: flex-start; align-items: flex-start; gap: 48px; display: inline-flex">
-        <div style="flex: 1 1 0; align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
-          <div style="width: 440px; height: 520px; position: relative">
-            <div style="width: 400px; height: 480px; left: 0px; top: 40px; position: absolute; background: #374151; border: 8px #111827 solid"></div>
-            <img style="width: 400px; height: 480px; left: 40px; top: 0px; position: absolute; border: 8px #111827 solid" src="images/v1_403.png" />
-          </div>
-        </div>
-        <div style="flex: 1 1 0; align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 24px; display: inline-flex">
-          <div style="color: #F9FAFB; font-size: 30px; font-family: Inter; font-weight: 600; line-height: 36px; word-wrap: break-word">Curious about me? Here you have it:</div>
-          <div style="align-self: stretch; height: 456px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 16px; display: flex">
-            <div style="align-self: stretch; color: #D1D5DB; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 24px; word-wrap: break-word">I'm a passionate, full-stack developer who specializes in React.js and Node.js. My focus is on crafting fast, accessible, visually appealing, and responsive digital experiences. I take pride in merging technical skill with design sensibility to create user-centered applications. Clean, readable code and a seamless user experience are central to my approach.<br/><br/><br/>I started my journey into web development over seven years ago, and since then, I’ve been on a constant path of growth, tackling new challenges and staying up-to-date with the latest in technology. As a current student in my second year at SRM University, majoring in Computer Science and Engineering with a specialization in Software Engineering, I’m continually expanding my knowledge in DSA, C++, Python, Java, and more.<br/><br/><br/>When I’m not immersed in coding, you can find me exploring new tech trends, contributing to my projects, or connecting with other tech enthusiasts. I’m always open to exciting new projects and collaborations, so feel free to reach out!</div>
-          </div>
-        </div>
+      <div class="work-card" data-aos="fade-left">
+        <h3>Coding Competition</h3>
+        <img src="images/competition.jpg" alt="Coding Competition Photo">
+      </div>
+      <div class="work-card" data-aos="fade-right">
+        <h3>Lab Experiment Completion</h3>
+        <img src="images/lab.jpg" alt="Lab Experiment Completion">
       </div>
     </div>
-  </div>
-  <div style="align-self: stretch; height: 412px; padding-left: 80px; padding-right: 80px; padding-top: 96px; padding-bottom: 96px; background: #030712; flex-direction: column; justify-content: center; align-items: center; display: flex">
-    <div style="align-self: stretch; height: 220px; padding-left: 32px; padding-right: 32px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 48px; display: flex">
-      <div style="align-self: stretch; height: 72px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 16px; display: flex">
-        <div style="align-self: stretch; height: 28px; flex-direction: column; justify-content: center; align-items: center; display: flex">
-          <div style="padding-left: 20px; padding-right: 20px; padding-top: 4px; padding-bottom: 4px; background: #374151; border-radius: 12px; justify-content: center; align-items: center; display: inline-flex">
-            <div style="color: #D1D5DB; font-size: 14px; font-family: Inter; font-weight: 500; line-height: 20px; word-wrap: break-word">Skills</div>
-          </div>
-        </div>
-        <div style="align-self: stretch; height: 28px; flex-direction: column; justify-content: center; align-items: center; display: flex">
-          <div style="align-self: stretch; text-align: center; color: #D1D5DB; font-size: 20px; font-family: Inter; font-weight: 400; line-height: 28px; word-wrap: break-word">The skills, tools and technologies I am really good at:</div>
-        </div>
-      </div>
-      <div style="align-self: stretch; height: 100px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 48px; display: flex">
-        <div style="align-self: stretch; justify-content: space-between; align-items: center; display: inline-flex">
-          <div style="align-self: stretch; flex-direction: column; justify-content: center; align-items: center; gap: 8px; display: inline-flex">
-            <div style="width: 64px; height: 64px; position: relative">
-              <div style="width: 64px; height: 64px; left: 0px; top: 0px; position: absolute; background: #FFD600"></div>
-              <div style="width: 40.30px; height: 28.44px; left: 16.59px; top: 28.44px; position: absolute; background: #000001"></div>
-            </div>
-            <div style="color: #D1D5DB; font-size: 18px; font-family: Inter; font-weight: 400; line-height: 28px; word-wrap: break-word">Javascript</div>
-          </div>
-          <div style="align-self: stretch; flex-direction: column; justify-content: center; align-items: center; gap: 8px; display: inline-flex">
-            <div style="width: 64px; height: 64px; position: relative">
-              <div style="width: 64px; height: 64px; left: 0px; top: 0px; position: absolute; background: #3178C6"></div>
-              <div style="width: 49.50px; height: 32.50px; left: 9px; top: 26px; position: absolute; background: white"></div>
-            </div>
-            <div style="color: #D1D5DB; font-size: 18px; font-family: Inter; font-weight: 400; line-height: 28px; word-wrap: break-word">Typescript</div>
-          </div>
-          <div style="align-self: stretch; flex-direction: column; justify-content: flex-end; align-items: center; gap: 8px; display: inline-flex">
-            <div style="width: 69.82px; height: 64px; position: relative">
-              <div style="width: 13.30px; height: 13.54px; left: 28.26px; top: 25.23px; position: absolute; background: #087EA4"></div>
-              <div style="width: 66.49px; height: 73.89px; left: 1.66px; top: -4.94px; position: absolute">
-                <div style="width: 66.49px; height: 30.48px; left: -0px; top: 21.71px; position: absolute; border: 3px #087EA4 solid"></div>
-                <div style="width: 67.42px; height: 30.06px; left: 29.58px; top: 0px; position: absolute; transform: rotate(60.45deg); transform-origin: 0 0; border: 3px #087EA4 solid"></div>
-                <div style="width: 67.42px; height: 30.06px; left: 62.83px; top: 15.24px; position: absolute; transform: rotate(119.55deg); transform-origin: 0 0; border: 3px #087EA4 solid"></div>
-              </div>
-            </div>
-            <div style="color: #D1D5DB; font-size: 18px; font-family: Inter; font-weight: 400; line-height: 28px; word-wrap: break-word">React</div>
-          </div>
-          <div style="align-self: stretch; flex-direction: column; justify-content: center; align-items: center; gap: 8px; display: inline-flex">
-            <div style="width: 64px; height: 64px; justify-content: center; align-items: center; display: inline-flex">
-              <div style="width: 64px; height: 64px; position: relative">
-                <div style="width: 64px; height: 64px; left: 0px; top: 0px; position: absolute; background: black"></div>
-                <div style="width: 61.87px; height: 61.87px; left: 1.07px; top: 1.07px; position: absolute">
-                  <div style="width: 61.87px; height: 61.87px; left: 0px; top: 0px; position: absolute; background: black; border: 6px white solid"></div>
-                  <div style="width: 33.96px; height: 39.41px; left: 18.13px; top: 18.13px; position: absolute; background: linear-gradient(141deg, white 0%, rgba(255, 255, 255, 0) 100%)"></div>
-                  <div style="width: 4.27px; height: 25.60px; left: 39.82px; top: 18.13px; position: absolute; background: linear-gradient(180deg, white 0%, rgba(255, 255, 255, 0) 100%)"></div>
-                </div>
-              </div>
-            </div>
-            <div style="color: #D1D5DB; font-size: 18px; font-family: Inter; font-weight: 400; line-height: 28px; word-wrap: break-word">Next.js</div>
-          </div>
-          <div style="align-self: stretch; flex-direction: column; justify-content: center; align-items: center; gap: 8px; display: inline-flex">
-            <div style="width: 56.32px; height: 64px; position: relative; border: 1px black solid">
-              <div style="width: 55.25px; height: 63.48px; left: 0.63px; top: 0.52px; position: absolute; background: #5FA04E"></div>
-              <div style="width: 23.45px; height: 25.89px; left: 23.28px; top: 19.62px; position: absolute; background: #5FA04E"></div>
-            </div>
-            <div style="color: #D1D5DB; font-size: 18px; font-family: Inter; font-weight: 400; line-height: 28px; word-wrap: break-word">Node.js</div>
-          </div>
-          <div style="align-self: stretch; flex-direction: column; justify-content: center; align-items: center; gap: 8px; display: inline-flex">
-            <div style="width: 64px; height: 64px; padding-top: 13.42px; padding-bottom: 13.45px; justify-content: center; align-items: center; display: inline-flex">
-              <div style="width: 64px; height: 37.13px; background: #F9FAFB"></div>
-            </div>
-            <div style="color: #D1D5DB; font-size: 18px; font-family: Inter; font-weight: 400; line-height: 28px; word-wrap: break-word">Express.js</div>
-          </div>
-          <div style="align-self: stretch; flex-direction: column; justify-content: center; align-items: center; gap: 8px; display: inline-flex">
-            <div style="width: 66.06px; height: 64px; padding-top: 1.06px; padding-bottom: 0.53px; padding-left: 1.50px; padding-right: 2.09px; justify-content: center; align-items: center; display: inline-flex">
-              <div style="width: 62.48px; height: 62.41px; background: #E0234E"></div>
-            </div>
-            <div style="color: #D1D5DB; font-size: 18px; font-family: Inter; font-weight: 400; line-height: 28px; word-wrap: break-word">Nest.js</div>
-          </div>
-          <div style="align-self: stretch; flex-direction: column; justify-content: center; align-items: center; gap: 8px; display: inline-flex">
-            <div style="width: 64px; height: 64px; padding-top: 0.04px; padding-bottom: 0.04px; padding-right: 0.01px; justify-content: center; align-items: center; display: inline-flex">
-              <div style="width: 63.99px; height: 63.91px; background: #F9FAFB"></div>
-            </div>
-            <div style="color: #D1D5DB; font-size: 18px; font-family: Inter; font-weight: 400; line-height: 28px; word-wrap: break-word">Socket.io</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div style="align-self: stretch; height: 1848px; padding-left: 80px; padding-right: 80px; padding-top: 96px; padding-bottom: 96px; background: #030712; flex-direction: column; justify-content: center; align-items: center; display: flex">
-    <div style="align-self: stretch; height: 1656px; padding-left: 32px; padding-right: 32px; flex-direction: column; justify-content: center; align-items: center; gap: 48px; display: flex">
-      <div style="align-self: stretch; height: 72px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 16px; display: flex">
-        <div style="align-self: stretch; height: 28px; flex-direction: column; justify-content: center; align-items: center; display: flex">
-          <div style="padding-left: 20px; padding-right: 20px; padding-top: 4px; padding-bottom: 4px; background: #374151; border-radius: 12px; justify-content: center; align-items: center; display: inline-flex">
-            <div style="color: #D1D5DB; font-size: 14px; font-family: Inter; font-weight: 500; line-height: 20px; word-wrap: break-word">Work</div>
-          </div>
-        </div>
-        <div style="align-self: stretch; height: 28px; flex-direction: column; justify-content: center; align-items: center; display: flex">
-          <div style="align-self: stretch; text-align: center; color: #D1D5DB; font-size: 20px; font-family: Inter; font-weight: 400; line-height: 28px; word-wrap: break-word">Some of the noteworthy work I have done:</div>
-        </div>
-      </div>
-      <div style="width: 1152px; background: #1F2937; box-shadow: 0px 25px 25px rgba(0, 0, 0, 0.15); border-radius: 12px; overflow: hidden; justify-content: flex-start; align-items: flex-start; display: inline-flex">
-        <div style="flex: 1 1 0; align-self: stretch; padding: 48px; background: #374151; border-top-left-radius: 12px; border-top-right-radius: 12px; overflow: hidden; border-right: 1px #1F2937 solid; justify-content: center; align-items: center; display: flex">
-          <img style="width: 480px; height: 384px; position: relative; box-shadow: 0px 10px 8px rgba(0, 0, 0, 0.04); border-radius: 12px" src="images/v1_599.png" />
-        </div>
-        <div style="flex: 1 1 0; align-self: stretch; padding: 48px; border-top-left-radius: 12px; border-top-right-radius: 12px; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: center; gap: 24px; display: inline-flex">
-          <div style="align-self: stretch; color: #F9FAFB; font-size: 20px; font-family: Inter; font-weight: 600; line-height: 28px; word-wrap: break-word">ELab Completion Status</div>
-          <div style="align-self: stretch; color: #D1D5DB; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 24px; word-wrap: break-word">Completed over 50 coding challenges on eLab, enhancing skills in problem-solving and algorithm optimization across DSA concepts like sorting, searching, deleting, singally and doublly linked list, stack, queue, hash maps, graphs and data manipulation.</div>
-          <div style="align-self: stretch; justify-content: flex-start; align-items: center; gap: 8px; display: inline-flex">
-            <div style="padding-left: 20px; padding-right: 20px; padding-top: 4px; padding-bottom: 4px; background: #374151; border-radius: 12px; justify-content: center; align-items: center; display: flex">
-              <div style="color: #D1D5DB; font-size: 14px; font-family: Inter; font-weight: 500; line-height: 20px; word-wrap: break-word">DSA</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div style="width: 1152px; background: #1F2937; box-shadow: 0px 25px 25px rgba(0, 0, 0, 0.15); border-radius: 12px; overflow: hidden; justify-content: flex-start; align-items: flex-start; display: inline-flex">
-        <div style="flex: 1 1 0; align-self: stretch; padding: 48px; border-top-left-radius: 12px; border-top-right-radius: 12px; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: center; gap: 24px; display: inline-flex">
-          <div style="align-self: stretch; color: #F9FAFB; font-size: 20px; font-family: Inter; font-weight: 600; line-height: 28px; word-wrap: break-word">Lab Experiment Completion Status</div>
-          <div style="align-self: stretch; color: #D1D5DB; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 24px; word-wrap: break-word">Completed 13 hands-on experiments focused on core Data Structures and Algorithms, gaining practical experience with concepts such as linked lists, trees, sorting algorithms, and recursive functions.</div>
-          <div style="align-self: stretch; justify-content: flex-start; align-items: center; gap: 8px; display: inline-flex">
-            <div style="padding-left: 20px; padding-right: 20px; padding-top: 4px; padding-bottom: 4px; background: #374151; border-radius: 12px; justify-content: center; align-items: center; display: flex">
-              <div style="color: #D1D5DB; font-size: 14px; font-family: Inter; font-weight: 500; line-height: 20px; word-wrap: break-word">DSA</div>
-            </div>
-          </div>
-        </div>
-        <div style="flex: 1 1 0; align-self: stretch; padding: 48px; background: #374151; border-top-left-radius: 12px; border-top-right-radius: 12px; overflow: hidden; border-left: 1px #1F2937 solid; justify-content: center; align-items: center; display: flex">
-          <img style="width: 480px; height: 384px; position: relative; box-shadow: 0px 10px 8px rgba(0, 0, 0, 0.04); border-radius: 12px" src="images/v1_634.png" />
-        </div>
-      </div>
-      <div style="width: 1152px; background: #1F2937; box-shadow: 0px 25px 25px rgba(0, 0, 0, 0.15); border-radius: 12px; overflow: hidden; justify-content: flex-start; align-items: flex-start; display: inline-flex">
-        <div style="flex: 1 1 0; align-self: stretch; padding: 48px; background: #374151; border-top-left-radius: 12px; border-top-right-radius: 12px; overflow: hidden; border-right: 1px #1F2937 solid; justify-content: center; align-items: center; display: flex">
-          <img style="width: 480px; height: 384px; position: relative; box-shadow: 0px 10px 8px rgba(0, 0, 0, 0.04); border-radius: 12px" src="images/v1_637.png" />
-        </div>
-        <div style="flex: 1 1 0; align-self: stretch; padding: 48px; border-top-left-radius: 12px; border-top-right-radius: 12px; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: center; gap: 24px; display: inline-flex">
-          <div style="align-self: stretch; color: #F9FAFB; font-size: 20px; font-family: Inter; font-weight: 600; line-height: 28px; word-wrap: break-word">Coding Competition</div>
-          <div style="align-self: stretch; color: #D1D5DB; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 24px; word-wrap: break-word">Participated in multiple coding tests on platforms like HackerRank and CodeChef, tackling a variety of algorithmic challenges and enhancing problem-solving skills in real-time competitive environments.</div>
-          <div style="align-self: stretch; justify-content: flex-start; align-items: center; gap: 8px; display: inline-flex">
-            <div style="padding-left: 20px; padding-right: 20px; padding-top: 4px; padding-bottom: 4px; background: #374151; border-radius: 12px; justify-content: center; align-items: center; display: flex">
-              <div style="color: #D1D5DB; font-size: 14px; font-family: Inter; font-weight: 500; line-height: 20px; word-wrap: break-word">DSA</div>
-            </div>
-          </div>
-          <div style="align-self: stretch"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div style="align-self: stretch; height: 560px; padding-left: 80px; padding-right: 80px; padding-top: 96px; padding-bottom: 96px; background: #030712; flex-direction: column; justify-content: center; align-items: center; display: flex">
-    <div style="align-self: stretch; height: 368px; padding-left: 32px; padding-right: 32px; flex-direction: column; justify-content: center; align-items: center; gap: 48px; display: flex">
-      <div style="align-self: stretch; height: 100px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 16px; display: flex">
-        <div style="align-self: stretch; height: 28px; flex-direction: column; justify-content: center; align-items: center; display: flex">
-          <div style="padding-left: 20px; padding-right: 20px; padding-top: 4px; padding-bottom: 4px; background: #374151; border-radius: 12px; justify-content: center; align-items: center; display: inline-flex">
-            <div style="color: #D1D5DB; font-size: 14px; font-family: Inter; font-weight: 500; line-height: 20px; word-wrap: break-word">Get in touch</div>
-          </div>
-        </div>
-        <div style="align-self: stretch; height: 56px; flex-direction: column; justify-content: center; align-items: center; display: flex">
-          <div style="align-self: stretch; text-align: center; color: #D1D5DB; font-size: 20px; font-family: Inter; font-weight: 400; line-height: 28px; word-wrap: break-word">What is next? Feel free to reach out to me if you're looking for a developer, have a query, or simply want to connect.</div>
-        </div>
-      </div>
-      <div style="flex-direction: column; justify-content: center; align-items: center; gap: 16px; display: flex">
-        <div style="justify-content: center; align-items: center; gap: 20px; display: inline-flex">
-          <div style="width: 32px; height: 32px; position: relative">
-            <div style="width: 26.67px; height: 21.33px; left: 2.67px; top: 5.33px; position: absolute; border: 2px #D1D5DB solid"></div>
-            <div style="width: 26.67px; height: 7.99px; left: 2.67px; top: 9.33px; position: absolute; border: 2px #D1D5DB solid"></div>
-          </div>
-          <div style="text-align: center; color: #F9FAFB; font-size: 36px; font-family: Inter; font-weight: 600; line-height: 40px; word-wrap: break-word">pv0525@srmist.edu.in</div>
-          <div style="padding: 6px; border-radius: 8px; justify-content: center; align-items: center; display: flex">
-            <div style="width: 32px; height: 32px; position: relative">
-              <div style="width: 18.67px; height: 18.67px; left: 10.67px; top: 10.67px; position: absolute; border: 2px #D1D5DB solid"></div>
-              <div style="width: 18.67px; height: 18.67px; left: 2.67px; top: 2.67px; position: absolute; border: 2px #D1D5DB solid"></div>
-            </div>
-          </div>
-        </div>
-        <div style="justify-content: center; align-items: center; gap: 20px; display: inline-flex">
-          <div style="width: 32px; height: 32px; padding-top: 2.67px; padding-bottom: 2.76px; padding-left: 2.82px; padding-right: 2.67px; justify-content: center; align-items: center; display: flex">
-            <div style="width: 26.52px; height: 26.57px; border: 2px #D1D5DB solid"></div>
-          </div>
-          <div style="text-align: center; color: #F9FAFB; font-size: 36px; font-family: Inter; font-weight: 600; line-height: 40px; word-wrap: break-word">+91 7069882088</div>
-          <div style="padding: 6px; border-radius: 8px; justify-content: center; align-items: center; display: flex">
-            <div style="width: 32px; height: 32px; position: relative">
-              <div style="width: 18.67px; height: 18.67px; left: 10.67px; top: 10.67px; position: absolute; border: 2px #D1D5DB solid"></div>
-              <div style="width: 18.67px; height: 18.67px; left: 2.67px; top: 2.67px; position: absolute; border: 2px #D1D5DB solid"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div style="align-self: stretch; border-radius: 12px; justify-content: center; align-items: center; gap: 64px; display: inline-flex"></div>
-    </div>
-  </div>
-</div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" data-aos="fade-up">
+    <h2 class="section-title">Contact Me</h2>
+    <p style="text-align: center;">
+      Email me at <a href="mailto:you@example.com">you@example.com</a> or connect on
+      <a href="https://linkedin.com" target="_blank">LinkedIn</a>.
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 [Your Name]. Built with ❤️ — <a href="mailto:you@example.com">you@example.com</a></p>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    function toggleTheme() {
+      document.body.classList.toggle("dark");
+    }
+
+    // Animate skill bars when in view
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const bar = entry.target.querySelector('.skill-bar-fill');
+          bar.style.width = bar.getAttribute('data-fill');
+        }
+      });
+    });
+
+    document.querySelectorAll('.skill').forEach(skill => observer.observe(skill));
+  </script>
+</body>
+</html>
